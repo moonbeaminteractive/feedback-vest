@@ -2,6 +2,7 @@
 vest with haptic and visual feedback
 
 ## Prototype Design
+![alt vest-font](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/front.jpg)
 ![alt vest-back](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/back.jpg)
 ## Hardware
 * nRF24L01 Wireless Transceiver
