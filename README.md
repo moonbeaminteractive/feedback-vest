@@ -17,7 +17,7 @@ vest with haptic and visual feedback
 
 ## Log
 ### Nov/19/2016
-
+![alt testing-arduino-mini](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/p1.JPG)
 #### Progress
 * Tested Arduino Pro Mini with blink example
 * Tested IR receiver with IR led, as well as TV remote controller
