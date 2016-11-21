@@ -33,3 +33,9 @@ vest with haptic and visual feedback
 * Check communication protocol between arm, weapon and pickup group
 * Design iteration: meeting with other groups about the size of different components
 * Notification system design with Buzzer/microphone and dotstar
+
+
+### Nov/21/2016
+#### Progress
+* Tested communication between two nRF24L01 wireless transceivers, send & receive signal successfully
+
