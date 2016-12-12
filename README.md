@@ -2,8 +2,11 @@
 vest with haptic and visual feedback
 
 ## Circuit Diagram
+![alt circuit](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/circuit.jpg)
 
 ## PCB
+![alt pcb](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/pcb.png)
+
 ## Prototype Design
 ![alt vest-font](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/front.jpg)
 ![alt vest-back](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/back.jpg)
