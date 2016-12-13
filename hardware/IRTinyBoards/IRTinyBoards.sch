@@ -1,0 +1,172 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:IRTinyBoards-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X03 P2
+U 1 1 5850646D
+P 2450 2275
+F 0 "P2" H 2450 2475 50  0000 C CNN
+F 1 "CONN_01X03" V 2550 2275 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2450 2275 50  0001 C CNN
+F 3 "" H 2450 2275 50  0000 C CNN
+	1    2450 2275
+	-1   0    0    1   
+$EndComp
+Text GLabel 2650 2175 2    60   Input ~ 0
+GND
+Text GLabel 2650 2275 2    60   Input ~ 0
+VCC
+$Comp
+L CONN_01X03 P3
+U 1 1 58506501
+P 2450 2750
+F 0 "P3" H 2450 2950 50  0000 C CNN
+F 1 "CONN_01X03" V 2550 2750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2450 2750 50  0001 C CNN
+F 3 "" H 2450 2750 50  0000 C CNN
+	1    2450 2750
+	-1   0    0    1   
+$EndComp
+Text GLabel 2650 2650 2    60   Input ~ 0
+GND
+Text GLabel 2650 2750 2    60   Input ~ 0
+VCC
+$Comp
+L CONN_01X03 P1
+U 1 1 58506585
+P 2450 1625
+F 0 "P1" H 2450 1825 50  0000 C CNN
+F 1 "CONN_01X03" V 2550 1625 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2450 1625 50  0001 C CNN
+F 3 "" H 2450 1625 50  0000 C CNN
+	1    2450 1625
+	-1   0    0    1   
+$EndComp
+Text GLabel 2650 1525 2    60   Input ~ 0
+GND
+Text GLabel 2650 1625 2    60   Input ~ 0
+VCC
+$Comp
+L CONN_01X03 P4
+U 1 1 58507E09
+P 4050 2275
+F 0 "P4" H 4050 2475 50  0000 C CNN
+F 1 "CONN_01X03" V 4150 2275 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 4050 2275 50  0001 C CNN
+F 3 "" H 4050 2275 50  0000 C CNN
+	1    4050 2275
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 2375 0    60   Input ~ 0
+GND
+Text GLabel 3850 2275 0    60   Input ~ 0
+VCC
+Wire Wire Line
+	3850 2175 3375 2175
+Wire Wire Line
+	3375 1725 3375 2850
+Wire Wire Line
+	3375 1725 2650 1725
+Wire Wire Line
+	3375 2375 2650 2375
+Connection ~ 3375 2175
+Wire Wire Line
+	3375 2850 2650 2850
+Connection ~ 3375 2375
+$Comp
+L R R1
+U 1 1 585077F6
+P 4400 1450
+F 0 "R1" V 4480 1450 50  0000 C CNN
+F 1 "0" V 4400 1450 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 4330 1450 50  0001 C CNN
+F 3 "" H 4400 1450 50  0000 C CNN
+	1    4400 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 4400 1250 1    60   Input ~ 0
+GND
+Text GLabel 4400 1650 3    60   Input ~ 0
+GND
+Wire Wire Line
+	4400 1250 4400 1300
+Wire Wire Line
+	4400 1275 4300 1275
+Wire Wire Line
+	4300 1275 4300 1625
+Wire Wire Line
+	4300 1625 4400 1625
+Wire Wire Line
+	4400 1600 4400 1650
+Connection ~ 4400 1275
+Connection ~ 4400 1625
+$Comp
+L R R2
+U 1 1 58507930
+P 4675 1450
+F 0 "R2" V 4755 1450 50  0000 C CNN
+F 1 "0" V 4675 1450 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 4605 1450 50  0001 C CNN
+F 3 "" H 4675 1450 50  0000 C CNN
+	1    4675 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 4675 1250 1    60   Input ~ 0
+GND
+Text GLabel 4675 1650 3    60   Input ~ 0
+GND
+Wire Wire Line
+	4675 1250 4675 1300
+Wire Wire Line
+	4675 1275 4575 1275
+Wire Wire Line
+	4575 1275 4575 1625
+Wire Wire Line
+	4575 1625 4675 1625
+Wire Wire Line
+	4675 1600 4675 1650
+Connection ~ 4675 1275
+Connection ~ 4675 1625
+$EndSCHEMATC
