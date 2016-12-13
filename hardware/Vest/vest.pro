@@ -1,4 +1,4 @@
-update=Monday, December 12, 2016 'AMt' 12:16:07 AM
+update=Monday, December 12, 2016 'PMt' 01:41:36 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,13 @@ LibName29=contrib
 LibName30=valves
 LibName31=/Users/amy/Dropbox (Personal)/Gatech/Fall 2016/ID6763 DOIE/Project 3/ArduProMini/ArduProMiniTKB
 LibName32=/Users/cherylwang/Downloads/ArduProMini (1)/ArduProMiniTKB
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
