@@ -47,3 +47,14 @@ vest with haptic and visual feedback
 #### Progress
 * Tested communication between two nRF24L01 wireless transceivers, send & receive signal successfully
 
+
+# Vest-to-Weapons Connection
+
+Table of Vest-to-Weapon connections
+
+| Pin | Signal |
+| --- | --- |
+| 1 | V50 |
+| 2 | TX(Vest), RX(Weapon) |
+| 3 | RX(Vest), TX(Weapon) |
+| 4 | GND |
