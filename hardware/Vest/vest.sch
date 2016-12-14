@@ -29,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ArduProMiniTKB
 LIBS:vest-cache
 EELAYER 25 0
 EELAYER END
@@ -73,20 +72,9 @@ U 1 1 584CED73
 P 4300 2050
 F 0 "P2" H 4500 1850 50  0000 C CNN
 F 1 "USB_B" H 4250 2250 50  0000 C CNN
-F 2 "Connect:USB_A" V 4250 1950 50  0001 C CNN
+F 2 "Connect:USB_B" V 4250 1950 50  0001 C CNN
 F 3 "" V 4250 1950 50  0000 C CNN
 	1    4300 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L USB_B P1
-U 1 1 584CEDB8
-P 2100 5000
-F 0 "P1" H 2300 4800 50  0000 C CNN
-F 1 "USB_B" H 2050 5200 50  0000 C CNN
-F 2 "Connect:USB_A" V 2050 4900 50  0001 C CNN
-F 3 "" V 2050 4900 50  0000 C CNN
-	1    2100 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -236,18 +224,14 @@ Text Notes 4150 1650 0    60   ~ 0
 Power
 Text Notes 1900 4600 0    60   ~ 0
 Weapon\n
-Text GLabel 1900 5300 3    60   Input ~ 0
+Text GLabel 1175 5275 3    60   Input ~ 0
 VCC_J
-Text GLabel 2200 5300 3    60   Input ~ 0
+Text GLabel 1475 5275 3    60   Input ~ 0
 GND
-Text GLabel 2000 5300 3    60   Input ~ 0
-TX_to_weapon_RX
-Text GLabel 2100 5800 3    60   Input ~ 0
-RX_to_weapon_TX
 Text GLabel 3500 3700 0    60   Input ~ 0
-TX_to_weapon_RX
+TX(Vest)
 Text GLabel 3500 3800 0    60   Input ~ 0
-RX_to_weapon_TX
+RX(Vest)
 Text GLabel 3500 4100 0    60   Input ~ 0
 IRQ
 $Comp
@@ -280,12 +264,12 @@ GND
 $Comp
 L R R0
 U 1 1 584E4E76
-P 2100 5650
-F 0 "R0" V 2180 5650 50  0000 C CNN
-F 1 "R0" V 2100 5650 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 2030 5650 50  0001 C CNN
-F 3 "" H 2100 5650 50  0000 C CNN
-	1    2100 5650
+P 1375 5425
+F 0 "R0" V 1455 5425 50  0000 C CNN
+F 1 "R0" V 1375 5425 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 1305 5425 50  0001 C CNN
+F 3 "" H 1375 5425 50  0000 C CNN
+	1    1375 5425
 	1    0    0    -1  
 $EndComp
 Text GLabel 7500 3350 0    60   Input ~ 0
@@ -382,7 +366,7 @@ U 1 1 584F1C96
 P 6700 1500
 F 0 "L1" H 6700 1600 50  0000 C CNN
 F 1 "INDUCTOR_SMALL" H 6700 1450 50  0000 C CNN
-F 2 "" H 6700 1500 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206" H 6700 1500 50  0001 C CNN
 F 3 "" H 6700 1500 50  0000 C CNN
 	1    6700 1500
 	0    1    1    0   
@@ -574,8 +558,6 @@ Wire Wire Line
 	1700 2900 1700 3000
 Wire Wire Line
 	1450 2600 1700 2600
-Wire Wire Line
-	2100 5300 2100 5500
 Wire Wire Line
 	5950 2550 6050 2550
 Wire Wire Line
@@ -845,4 +827,19 @@ F 3 "" H 7450 5900 50  0000 C CNN
 	1    7450 5900
 	0    1    1    0   
 $EndComp
+$Comp
+L USB_A P3
+U 1 1 5850C2DD
+P 1375 4975
+F 0 "P3" H 1575 4775 50  0000 C CNN
+F 1 "USB_A" H 1325 5175 50  0000 C CNN
+F 2 "Connect:USB_A" V 1325 4875 50  0001 C CNN
+F 3 "" V 1325 4875 50  0000 C CNN
+	1    1375 4975
+	1    0    0    -1  
+$EndComp
+Text GLabel 1275 5275 3    60   Input ~ 0
+TX(Vest)
+Text GLabel 1375 5575 3    60   Input ~ 0
+RX(Vest)
 $EndSCHEMATC
