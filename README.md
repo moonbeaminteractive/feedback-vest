@@ -24,6 +24,7 @@ vest with haptic and visual feedback
 * Battery
 
 ## Communication
+![alt vest-communication](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/communication.png)
 https://docs.google.com/spreadsheets/d/1SZP6osHujqh5WhPNwRo56sCZVwubzTMAS0mKgGUERew/edit#gid=0
 
 ## Log
