@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/amy/Downloads/Vest/vest.sch)
-    (date "Tuesday, December 13, 2016 'PMt' 04:46:39 PM")
+    (date "Tuesday, December 13, 2016 'PMt' 10:25:24 PM")
     (tool "Eeschema 4.0.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -28,8 +28,8 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 584CECDA))
     (comp (ref P2)
-      (value USB_B)
-      (footprint Connect:USB_A)
+      (value USB_B_Power)
+      (footprint Connect:USB_B)
       (libsource (lib conn) (part USB_B))
       (sheetpath (names /) (tstamps /))
       (tstamp 584CED73))
@@ -480,14 +480,14 @@
         (pin (num 4) (name GND) (type power_in))
         (pin (num 5) (name shield) (type passive)))))
   (libraries
-    (library (logical vest-rescue)
-      (uri /Users/amy/Downloads/Vest/vest-rescue.lib))
     (library (logical transistors)
       (uri "/Library/Application Support/kicad/library/transistors.lib"))
+    (library (logical conn)
+      (uri "/Library/Application Support/kicad/library/conn.lib"))
     (library (logical device)
       (uri "/Library/Application Support/kicad/library/device.lib"))
-    (library (logical conn)
-      (uri "/Library/Application Support/kicad/library/conn.lib")))
+    (library (logical vest-rescue)
+      (uri /Users/amy/Downloads/Vest/vest-rescue.lib)))
   (nets
     (net (code 1) (name "Net-(Q2-Pad1)")
       (node (ref Re2) (pin 2))
