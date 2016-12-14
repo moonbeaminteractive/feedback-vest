@@ -36,8 +36,7 @@ const long transmissionPaused   = 1000;
 /***********************************************************/
 /**************   Weapon Serial connection     *************/
 /***********************************************************/
-
-SoftwareSerial 
+SoftwareSerial weaponSerial(RXPIN, TXPIN); // RX, TX
 
 void setup() {
   // put your setup code here, to run once:
@@ -51,6 +50,16 @@ void setup() {
     morseInput.setspeed(13);
     lastTransmissionTime = (long)millis();
 
+    /*
+    ** Weapon serial
+    */
+    while(!Serial)
+    {
+        // wait for serial port to connect.
+    }
+
+
+
 
 }
 
@@ -58,6 +67,9 @@ void setup() {
 
 void loop()
 {
+    /*
+    ** Microphone
+    */
     currentTime = (long)millis();
   
     // Needs to call these once per loop
@@ -96,5 +108,17 @@ void loop()
             transmissionEnded = true;
         }
     }
+
+    /*
+    ** Weapon serial testing
+    */
+
+    // if(weaponSerial.available()){
+    //     Serial.write(weaponSerial.read());
+    // }
+    // if(Serial.available()){
+    //     weaponSerial.write(Serial.read());
+    // }
+
 }
 
