@@ -23,6 +23,9 @@ vest with haptic and visual feedback
 * ADC (*1)
 * Battery
 
+## Communication
+https://docs.google.com/spreadsheets/d/1SZP6osHujqh5WhPNwRo56sCZVwubzTMAS0mKgGUERew/edit#gid=0
+
 ## Log
 ### Nov/19/2016
 ![alt testing-arduino-mini](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/p1.JPG)
