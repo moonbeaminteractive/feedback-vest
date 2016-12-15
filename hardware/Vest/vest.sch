@@ -29,6 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ArduProMiniTKB
 LIBS:vest-cache
 EELAYER 25 0
 EELAYER END
@@ -75,6 +76,17 @@ F 1 "USB_B_Power" H 4250 2250 50  0000 C CNN
 F 2 "Connect:USB_B" V 4250 1950 50  0001 C CNN
 F 3 "" V 4250 1950 50  0000 C CNN
 	1    4300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB_B P1
+U 1 1 584CEDB8
+P 2100 5000
+F 0 "P1" H 2300 4800 50  0000 C CNN
+F 1 "USB_B" H 2050 5200 50  0000 C CNN
+F 2 "Connect:USB_A" V 2050 4900 50  0001 C CNN
+F 3 "" V 2050 4900 50  0000 C CNN
+	1    2100 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -168,28 +180,17 @@ PIN9
 Text GLabel 3500 4800 0    60   Input ~ 0
 PIN9
 Text GLabel 3600 5600 1    60   Input ~ 0
-VCC_J
+VCC
 Text GLabel 3400 5200 1    60   Input ~ 0
 GND
 Text Notes 3350 5800 0    60   ~ 0
 Mic
-$Comp
-L ARDUPROMINI-RESCUE-vest uP1
-U 1 1 584CEA6B
-P 4850 2500
-F 0 "uP1" H 4550 2200 60  0000 C CNN
-F 1 "ARDUPROMINI" H 4150 1550 60  0000 C CNN
-F 2 "ArduProMiniTKB:ArduProMini" H 4850 2500 60  0001 C CNN
-F 3 "" H 4850 2500 60  0000 C CNN
-	1    4850 2500
-	1    0    0    -1  
-$EndComp
 Text GLabel 4700 4300 2    60   Input ~ 0
 A1
 Text GLabel 4700 4400 2    60   Input ~ 0
 A0
 Text GLabel 6800 5200 0    60   Input ~ 0
-Buzzer_VCC_OUT
+VCC
 Text GLabel 6800 5300 0    60   Input ~ 0
 PIN5
 Text GLabel 6450 5400 0    60   Input ~ 0
@@ -201,16 +202,16 @@ LEDs
 Text Notes 7200 5350 0    60   ~ 0
 IR
 Text GLabel 3500 4600 0    60   Input ~ 0
-CE
-Text GLabel 3500 4700 0    60   Input ~ 0
 CSN
+Text GLabel 3200 4700 0    60   Input ~ 0
+CE
 Text GLabel 4700 4500 2    60   Input ~ 0
 SCK
 Text GLabel 4700 4600 2    60   Input ~ 0
 MISO
-Text GLabel 4700 4700 2    60   Input ~ 0
+Text GLabel 5000 4700 2    60   Input ~ 0
 MOSI
-Text Notes 6200 4050 0    60   ~ 0
+Text Notes 6750 4050 0    60   ~ 0
 NRF24L01
 Text GLabel 4700 4000 2    60   Input ~ 0
 VCC
@@ -224,14 +225,18 @@ Text Notes 4150 1650 0    60   ~ 0
 Power
 Text Notes 1900 4600 0    60   ~ 0
 Weapon\n
-Text GLabel 1175 5275 3    60   Input ~ 0
-VCC_J
-Text GLabel 1475 5275 3    60   Input ~ 0
+Text GLabel 1900 5600 3    60   Input ~ 0
+VCC
+Text GLabel 2200 5300 3    60   Input ~ 0
 GND
+Text GLabel 2000 5300 3    60   Input ~ 0
+TX_to_weapon_RX
+Text GLabel 2100 5300 3    60   Input ~ 0
+RX_to_weapon_TX
 Text GLabel 3500 3700 0    60   Input ~ 0
-TX(Vest)
+TX_to_weapon_RX
 Text GLabel 3500 3800 0    60   Input ~ 0
-RX(Vest)
+RX_to_weapon_TX
 Text GLabel 3500 4100 0    60   Input ~ 0
 IRQ
 $Comp
@@ -246,7 +251,7 @@ F 3 "" H 8300 3200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 8100 3050 0    60   Input ~ 0
-Belt_VCC_OUT
+VCC
 Text GLabel 8100 3150 0    60   Input ~ 0
 PIN3
 Text GLabel 8100 3250 0    60   Input ~ 0
@@ -261,17 +266,6 @@ Text GLabel 4700 4200 2    60   Input ~ 0
 A2
 Text GLabel 3950 2700 2    60   Input ~ 0
 GND
-$Comp
-L R R0
-U 1 1 584E4E76
-P 1375 5425
-F 0 "R0" V 1455 5425 50  0000 C CNN
-F 1 "R0" V 1375 5425 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 1305 5425 50  0001 C CNN
-F 3 "" H 1375 5425 50  0000 C CNN
-	1    1375 5425
-	1    0    0    -1  
-$EndComp
 Text GLabel 7500 3350 0    60   Input ~ 0
 GND
 $Comp
@@ -280,7 +274,7 @@ U 1 1 584ECC78
 P 5750 2900
 F 0 "R8" V 5830 2900 50  0000 C CNN
 F 1 "R0" V 5750 2900 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 5680 2900 50  0001 C CNN
+F 2 "Resistors_SMD:R_2512" V 5680 2900 50  0001 C CNN
 F 3 "" H 5750 2900 50  0000 C CNN
 	1    5750 2900
 	0    1    1    0   
@@ -290,72 +284,27 @@ PIN10_OUT
 Text GLabel 5600 2900 0    60   Input ~ 0
 PIN10
 $Comp
-L R R19
-U 1 1 584EDEB3
-P 5350 4150
-F 0 "R19" V 5430 4150 50  0000 C CNN
-F 1 "R" V 5350 4150 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 5280 4150 50  0001 C CNN
-F 3 "" H 5350 4150 50  0000 C CNN
-	1    5350 4150
-	0    1    1    0   
-$EndComp
-Text GLabel 5200 4150 0    60   Input ~ 0
-VCC
-Text GLabel 5500 4150 2    60   Input ~ 0
-VCC_J
-$Comp
-L R R20
-U 1 1 584EE31F
-P 5400 3300
-F 0 "R20" V 5480 3300 50  0000 C CNN
-F 1 "R" V 5400 3300 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 5330 3300 50  0001 C CNN
-F 3 "" H 5400 3300 50  0000 C CNN
-	1    5400 3300
-	0    1    1    0   
-$EndComp
-Text GLabel 5250 3300 0    60   Input ~ 0
-Buzzer_VCC_OUT
-Text GLabel 5550 3300 2    60   Input ~ 0
-VCC_J
-$Comp
 L R R18
 U 1 1 584EE81E
 P 2300 2100
 F 0 "R18" V 2380 2100 50  0000 C CNN
 F 1 "R" V 2300 2100 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 2230 2100 50  0001 C CNN
+F 2 "Resistors_SMD:R_2010" V 2230 2100 50  0001 C CNN
 F 3 "" H 2300 2100 50  0000 C CNN
 	1    2300 2100
 	0    1    1    0   
 $EndComp
-Text GLabel 2450 2100 2    60   Input ~ 0
+Text GLabel 2800 2100 2    60   Input ~ 0
 Vib_VCC_OUT
 Text GLabel 2150 2100 0    60   Input ~ 0
-VCC_J
-$Comp
-L R R21
-U 1 1 584EEC55
-P 9150 2850
-F 0 "R21" V 9230 2850 50  0000 C CNN
-F 1 "R" V 9150 2850 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 9080 2850 50  0001 C CNN
-F 3 "" H 9150 2850 50  0000 C CNN
-	1    9150 2850
-	0    1    1    0   
-$EndComp
-Text GLabel 9000 2850 0    60   Input ~ 0
-Belt_VCC_OUT
-Text GLabel 9300 2850 2    60   Input ~ 0
-VCC_J
+VCC
 $Comp
 L SPEAKER SP1
 U 1 1 584F19DF
 P 7500 1450
 F 0 "SP1" H 7400 1700 50  0000 C CNN
 F 1 "SPEAKER" H 7400 1200 50  0000 C CNN
-F 2 "Buzzers_Beepers:MagneticBuzzer_Kingstate_KCG0601" H 7500 1450 50  0001 C CNN
+F 2 "Buzzers_Beepers:MagneticBuzzer_ProSignal_ABI-010-RC" H 7500 1450 50  0001 C CNN
 F 3 "" H 7500 1450 50  0000 C CNN
 	1    7500 1450
 	1    0    0    -1  
@@ -366,7 +315,7 @@ U 1 1 584F1C96
 P 6700 1500
 F 0 "L1" H 6700 1600 50  0000 C CNN
 F 1 "INDUCTOR_SMALL" H 6700 1450 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" H 6700 1500 50  0001 C CNN
+F 2 "" H 6700 1500 50  0001 C CNN
 F 3 "" H 6700 1500 50  0000 C CNN
 	1    6700 1500
 	0    1    1    0   
@@ -492,7 +441,7 @@ F 3 "" H 7800 3000 50  0000 C CNN
 	1    7800 4200
 	1    0    0    -1  
 $EndComp
-Text GLabel 6700 4050 0    60   Input ~ 0
+Text GLabel 7550 4050 0    60   Input ~ 0
 GND
 Text GLabel 7550 4150 0    60   Input ~ 0
 CE
@@ -500,47 +449,14 @@ Text GLabel 7550 4350 0    60   Input ~ 0
 MISO
 Text GLabel 7550 4250 0    60   Input ~ 0
 SCK
-Text GLabel 8700 4050 2    60   Input ~ 0
+Text GLabel 8500 4050 2    60   Input ~ 0
 VCC
 Text GLabel 8050 4150 2    60   Input ~ 0
 CSN
 Text GLabel 8050 4250 2    60   Input ~ 0
 MOSI
-Text GLabel 8700 4350 2    60   Input ~ 0
+Text GLabel 8050 4350 2    60   Input ~ 0
 IRQ
-$Comp
-L R R5
-U 1 1 584F82FE
-P 8550 4350
-F 0 "R5" V 8630 4350 50  0000 C CNN
-F 1 "R" V 8550 4350 50  0000 C CNN
-F 2 "Resistors_SMD:R_2010" V 8480 4350 50  0001 C CNN
-F 3 "" H 8550 4350 50  0000 C CNN
-	1    8550 4350
-	0    1    1    0   
-$EndComp
-$Comp
-L R R9
-U 1 1 584F959C
-P 8550 4050
-F 0 "R9" V 8630 4050 50  0000 C CNN
-F 1 "R" V 8550 4050 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 8480 4050 50  0001 C CNN
-F 3 "" H 8550 4050 50  0000 C CNN
-	1    8550 4050
-	0    1    1    0   
-$EndComp
-$Comp
-L R R7
-U 1 1 584F9621
-P 7200 4050
-F 0 "R7" V 7280 4050 50  0000 C CNN
-F 1 "R" V 7200 4050 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 7130 4050 50  0001 C CNN
-F 3 "" H 7200 4050 50  0000 C CNN
-	1    7200 4050
-	0    1    1    0   
-$EndComp
 $Comp
 L R R12
 U 1 1 584FAA35
@@ -629,12 +545,6 @@ Wire Wire Line
 	3700 7150 3700 7200
 Connection ~ 3700 7200
 Wire Wire Line
-	8050 4350 8400 4350
-Wire Wire Line
-	8400 4050 8050 4050
-Wire Wire Line
-	7550 4050 7350 4050
-Wire Wire Line
 	1700 3400 1700 3550
 Wire Wire Line
 	6750 5400 6800 5400
@@ -664,19 +574,6 @@ F 3 "" H 3400 5350 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	3400 5500 3400 5600
-$Comp
-L R R13
-U 1 1 584FBDDF
-P 6850 4050
-F 0 "R13" V 6930 4050 50  0000 C CNN
-F 1 "0" V 6850 4050 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 6780 4050 50  0001 C CNN
-F 3 "" H 6850 4050 50  0000 C CNN
-	1    6850 4050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7000 4050 7050 4050
 $Comp
 L R R11
 U 1 1 584FC110
@@ -775,7 +672,7 @@ F 3 "" H 7800 5750 50  0000 C CNN
 $EndComp
 Text GLabel 7200 5600 0    60   Input ~ 0
 RAW
-Text GLabel 7300 5900 0    60   Input ~ 0
+Text GLabel 7600 5900 0    60   Input ~ 0
 GND
 $Comp
 L CONN_01X04 LEDs3
@@ -817,29 +714,72 @@ $EndComp
 Wire Wire Line
 	7200 5600 7300 5600
 $Comp
-L R R26
-U 1 1 58507960
-P 7450 5900
-F 0 "R26" V 7530 5900 50  0000 C CNN
-F 1 "0" V 7450 5900 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 7380 5900 50  0001 C CNN
-F 3 "" H 7450 5900 50  0000 C CNN
-	1    7450 5900
+L R R22
+U 1 1 5851BCE2
+P 1900 5450
+F 0 "R22" V 1980 5450 50  0000 C CNN
+F 1 "0" V 1900 5450 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 1830 5450 50  0001 C CNN
+F 3 "" H 1900 5450 50  0000 C CNN
+	1    1900 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R5
+U 1 1 5851D91D
+P 3350 4700
+F 0 "R5" V 3430 4700 50  0000 C CNN
+F 1 "R" V 3350 4700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 3280 4700 50  0001 C CNN
+F 3 "" H 3350 4700 50  0000 C CNN
+	1    3350 4700
 	0    1    1    0   
 $EndComp
 $Comp
-L USB_A P3
-U 1 1 5850C2DD
-P 1375 4975
-F 0 "P3" H 1575 4775 50  0000 C CNN
-F 1 "USB_A" H 1325 5175 50  0000 C CNN
-F 2 "Connect:USB_A" V 1325 4875 50  0001 C CNN
-F 3 "" V 1325 4875 50  0000 C CNN
-	1    1375 4975
+L R R7
+U 1 1 5851DCFB
+P 8350 4050
+F 0 "R7" V 8430 4050 50  0000 C CNN
+F 1 "R" V 8350 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_2010" V 8280 4050 50  0001 C CNN
+F 3 "" H 8350 4050 50  0000 C CNN
+	1    8350 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L R R9
+U 1 1 5851E5C0
+P 4850 4700
+F 0 "R9" V 4930 4700 50  0000 C CNN
+F 1 "R" V 4850 4700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 4780 4700 50  0001 C CNN
+F 3 "" H 4850 4700 50  0000 C CNN
+	1    4850 4700
+	0    1    1    0   
+$EndComp
+Text GLabel 8100 3900 1    60   Input ~ 0
+VCC
+Wire Wire Line
+	8050 4050 8200 4050
+Connection ~ 8100 4050
+Wire Wire Line
+	8100 3900 8100 4050
+$Comp
+L ARDUPROMINI-RESCUE-vest uP1
+U 1 1 584CEA6B
+P 4850 2500
+F 0 "uP1" H 4550 2200 60  0000 C CNN
+F 1 "ARDUPROMINI" H 4150 1550 60  0000 C CNN
+F 2 "ArduProMiniTKB:ArduProMini" H 4850 2500 60  0001 C CNN
+F 3 "" H 4850 2500 60  0000 C CNN
+	1    4850 2500
 	1    0    0    -1  
 $EndComp
-Text GLabel 1275 5275 3    60   Input ~ 0
-TX(Vest)
-Text GLabel 1375 5575 3    60   Input ~ 0
-RX(Vest)
+Wire Wire Line
+	2450 2100 2800 2100
+Text GLabel 2600 1950 1    60   Input ~ 0
+VCC
+Wire Wire Line
+	2600 1950 2600 2100
+Connection ~ 2600 2100
 $EndSCHEMATC

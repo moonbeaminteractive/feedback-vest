@@ -1,4 +1,4 @@
-update=12/13/2016 8:52:07 PM
+update=Tuesday, December 13, 2016 'AMt' 01:57:21 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=../ArduProMini
@@ -69,5 +71,3 @@ NetFmtName=Pcbnew
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
-[general]
-version=1
