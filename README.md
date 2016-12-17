@@ -27,6 +27,11 @@ vest with haptic and visual feedback
 ![alt vest-font](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/front.jpg)
 ![alt vest-back](https://github.com/moonbeaminteractive/feedback-vest/blob/master/assets/back.jpg)
 
+![alt final prototype _ front](https://github.com/moonbeaminteractive/feedback-vest/blob/master/models/Images/whole/20161215_131018.jpg)
+![alt final prototype _ back](https://github.com/moonbeaminteractive/feedback-vest/blob/master/models/Images/vest/20161215_123611.jpg)
+
+
+
 ## Hardware
 * nRF24L01 Wireless Transceiver
 * Arduino Pro Mini
