@@ -16,7 +16,8 @@ vest with haptic and visual feedback
 ![alt pcb](https://github.com/moonbeaminteractive/feedback-vest/blob/master/hardware/LED%20Ring/LED%20Ring/LED%20PCB_zoom%20LED%20Component.PNG)
 
 ## circuit diagram and PCB - IR sensors
-![alt pcb](https://github.com/moonbeaminteractive/feedback-vest/commit/05f1afa8c41fc432923e1b5fe148c2c99b5d05d4)
+![alt circuit](https://github.com/moonbeaminteractive/feedback-vest/blob/master/hardware/IRTinyBoards/circuit.PNG)
+![alt pcb](https://github.com/moonbeaminteractive/feedback-vest/blob/master/hardware/IRTinyBoards/pcb.PNG)
 
 
 
